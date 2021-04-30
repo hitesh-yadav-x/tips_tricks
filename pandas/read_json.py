@@ -26,9 +26,9 @@ print(df)
 
 # Fix is to explicitly pass the dtypes in read_json method
 df2 = pd.read_json(json_content,
-                  orient='index',  # read as transposed
-                  convert_axes=False,  # don't convert keys to dates
-                  dtype= {'id': 'int64'}
-                  )
+                   orient='index',  # read as transposed
+                   convert_axes=False,  # don't convert keys to dates
+                   dtype={'id': 'int64'}
+                   )
 print(df2.info())
 print(df2)
